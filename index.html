@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- container for the whole webpage -->
+    <div class="container">
+        <!-- navigation bar container -->
+        <div class="navbar">
+            <!-- content inside the navigation bar -->
+            <div class="title">DojoWeather</div>
+            <div class="cities">
+                <div class="city"><a class="citys" href="" onclick="alertMsg(this)">Burbank</a></div>
+                <div class="city"><a class="citys" href="" onclick="alertMsg(this)">Chicago</a></div>
+                <div class="city"><a class="citys" href="" onclick="alertMsg(this)">Dallas</a></div>
+            </div>
+        </div>
+        <!-- content below the navigation bar ie. subhead San Jose -->
+        <div class="belownavbar">
+            <!-- content within below the navbar -->
+            <div class="sanjose">San Jose</div>
+            <div class="rightside">
+                <div class="temp">show temperature in</div>
+                <select name="temperature" id="temperature" onchange="convert()">
+                    <option value="Celsius">°C</option>
+                    <option value="Fahrenheit">°F</option>
+            </select>
+            </div>
+        </div>
+        <!-- main content which is located below belownavbar -->
+        <div class="content">
+            <div class="day">
+                <h2 class="today">Today</h2>
+                <img src="./images/some_rain.png" alt="rain">
+                <p class="rain">some rain</p>
+                <div class="highlow">
+                    <p class="high">24°</p>
+                    <p class="low">18°</p>
+                </div>
+            </div>
+            <div class="day">
+                <h2 class="tomorrow">Tomorrow</h2>
+                <img src="./images/some_sun.png" alt="sun">
+                <p class="sun">some sun</p>
+                <div class="highlow">
+                    <p class="high">27°</p>
+                    <p class="low">19°</p>
+                </div>
+            </div>
+            <div class="day">
+                <h2 class="friday">Friday</h2>
+                <img src="./images/some_clouds.png" alt="cloud">
+                <p class="cloud">some clouds</p>
+                <div class="highlow">
+                    <p class="high">21°</p>
+                    <p class="low">16°</p>
+                </div>
+            </div>
+            <div class="day">
+                <h2 class="saturday">Saturday</h2>
+                <img src="./images/some_sun.png" alt="sun">
+                <p class="sun">some suns</p>
+                <div class="highlow">
+                    <p class="high">26°</p>
+                    <p class="low">21°</p>
+                </div>
+            </div>
+        </div>
+        <!-- container for the cookie -->
+        <div class="cookie">
+            <img src="./images/cookie.png" alt="cookies" id="cook">
+            <div class="cookietime">
+                <h3>Stop! Cookie time</h3>
+                <p class="par">We use cookies (sadly not the edible ones) to personalize</p>
+                <p class="par">content and ads, to provide social media features and to</p>
+                <p class="par"> analyse our traffic. <a href="">Read more...</a></p>
+            </div>
+            <button class="accept" onclick="hideCookie()">I Accept</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
